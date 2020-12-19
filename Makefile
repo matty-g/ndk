@@ -3,7 +3,7 @@
 # End Compiler Info Output
 CXX = /usr/bin/g++-4.8
 LINK = /usr/bin/g++-4.8
-NDKDIR ?= /ce_apps/ubuntu16.04/Nuke11.2v2
+NDKDIR ?= /${SOFTWARE_PATH}/Nuke11.2v2
 #You will need to set the path to boost for psdReader only
 BOOSTDIR ?= REPLACE_ME_WITH_BOOST_DIR
 #You will need to set the path to openEXR for exr plugins only
@@ -33,11 +33,7 @@ do: DeepOpacity.so
 
 dc: DeepCurveTool.so
 
-shuffle: Shuffle_b.so
-
 dp: DeepPlus.so
-
-mp: MyPlus.so
 
 .PRECIOUS : %.os
 %.os: %.cpp
